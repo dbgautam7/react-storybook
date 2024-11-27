@@ -7,6 +7,8 @@ const config = {
     '@chromatic-com/storybook',
     '@storybook/addon-interactions',
     '@storybook/addon-viewport',
+    '@storybook/addon-knobs',
+    '@storybook/addon-a11y',
   ],
   framework: {
     name: '@storybook/react-vite',

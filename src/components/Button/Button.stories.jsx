@@ -1,5 +1,6 @@
 // import Center from '../Center/Center'
 import Button from './Button'
+import { text, boolean, withKnobs } from '@storybook/addon-knobs'
 
 export default {
   title: 'Form/Button',
@@ -7,7 +8,7 @@ export default {
   argTypes: {
     onClick: { action: 'clicked' },
   },
-  //   decorators: [(story) => <Center> {story()}</Center>],
+  decorators: [withKnobs],
 }
 
 export const Primary = () => <Button variant={'primary'}>Primary</Button>
@@ -34,3 +35,13 @@ SecondaryA.args = {
   variant: 'secondary',
   children: 'Secondary Args',
 }
+
+export const KnobsButton = () => (
+  <Button
+    variant={'primary'}
+    disabled={boolean('Disabled', false)}
+    onClick={() => console.log(import.meta.env.STORYBOOK_THEME, 'env')}
+  >
+    {text('Label', 'Button Label')}
+  </Button>
+)

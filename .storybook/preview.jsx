@@ -2,6 +2,7 @@
 
 import Center from '../src/components/Center/Center'
 import '@storybook/addon-console'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 const preview = {
   decorators: [(story) => <Center> {story()}</Center>], //this is global decorators
@@ -11,6 +12,10 @@ const preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+    viewport: {
+      viewports: INITIAL_VIEWPORTS,
+      defaultViewport: 'iphone14promax',
     },
     options: {
       storySort: (a, b) =>
