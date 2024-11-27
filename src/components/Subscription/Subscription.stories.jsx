@@ -1,15 +1,15 @@
-import { Primary } from "../Button/Button.stories"
-import { Large } from "../Input/Input.stories"
+import { Primary } from '../Button/Button.stories'
+import { Large } from '../Input/Input.stories'
 
 export default {
-    title: 'Form/Subscription',
+  title: 'Form/Subscription',
 }
 
 export const PrimarySubscription = () => {
-    return (
-        <>
-            <Large />
-            <Primary />
-        </>
-    )
+  return (
+    <>
+      <Large />
+      <Primary />
+    </>
+  )
 }
